@@ -148,7 +148,6 @@ dim.tbl_sql <- function(x) {
 #' @export
 head.tbl_sql <- function(x, n = 6L, ...) {
   assert_that(length(n) == 1, n > 0L)
-
   build_query(x, limit = n)$fetch()
 }
 
