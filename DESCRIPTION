@@ -22,6 +22,7 @@ Suggests:
     RSQLite.extfuns,
     RMySQL,
     RPostgreSQL,
+    rsqlserver,
     data.table,
     bigrquery,
     testthat,
@@ -90,6 +91,7 @@ Collate:
     'src-postgres.r'
     'src-sql.r'
     'src-sqlite.r'
+    'src-sqlserver.R'
     'src.r'
     'tally.R'
     'tbl-cube.r'

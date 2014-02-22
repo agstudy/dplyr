@@ -51,6 +51,10 @@ lahman_mysql <- function(...) cache_lahman("mysql", ...)
 
 #' @export
 #' @rdname lahman
+lahman_sqlserver <- function(...) cache_lahman("sqlserver", ...)
+
+#' @export
+#' @rdname lahman
 lahman_df <- function() {
   check_lahman()
   src_df("Lahman")
@@ -134,6 +138,7 @@ lahman_src <- function(type, ...) {
     dt = lahman_dt(),
     sqlite = src_sqlite(db_location(filename = "lahman.sqlite", ...), create = TRUE),
     mysql = src_mysql("lahman", ...),
+    sqlserver = src_sqlserver("lahman", ...),
     postgres = src_postgres("lahman", ...),
     bigquery = src_bigquery(Sys.getenv("BIGQUERY_PROJECT"), "lahman", ...),
     stop("Unknown src type ", type, call. = FALSE)
