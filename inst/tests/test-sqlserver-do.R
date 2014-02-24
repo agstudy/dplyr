@@ -20,7 +20,7 @@ test_that('Sql server source is well created',{
 })
 
 ## trusted local host 
-context('Connection basics')
+context('tbl tests')
 test_that('Sql server source is well created',{
   ss_db <- src_sqlserver(dbname = "TEST_RSQLSERVER", trusted = TRUE)
   ## non trusted local host 
