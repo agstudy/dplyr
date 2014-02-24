@@ -25,7 +25,5 @@ test_that('Sql server source is well created',{
   ss_db <- src_sqlserver(dbname = "TEST_RSQLSERVER", trusted = TRUE)
   ## non trusted local host 
   tbl(ss_db,'T_DATE')
-  expect_equal(src_tbls(my_db2),src_tbls(my_db4))
-  
 })
 
